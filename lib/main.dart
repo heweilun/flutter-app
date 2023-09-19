@@ -1,11 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
 import 'package:flutter_app/navigator/tab_navigator.dart';
-import 'package:http/http.dart' as http;
 
 void main() {
   runApp(const MyApp());
 }
+
+// class CommonModal {
+//   final String icon;
+//   final String title;
+//   final String url;
+//   final String statusBarColor;
+//   final bool hideAppBar;
+
+//   CommonModal({this.icon, this.title, this.url, this.statusBarColor, this.hideAppBar});
+  
+//   factory CommonModal.fromJson(Map<String, dynamic> json) {
+//     return CommonModal(
+//       icon: json['icon'],
+//       title: json['title'],
+//       url: json['url'],
+//       statusBarColor: json['statusBarColor'],
+//       hideAppBar: json['hideAppBar']
+//     );
+//   }
+// }
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}):super(key: key);

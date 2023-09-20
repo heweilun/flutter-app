@@ -16,7 +16,7 @@ class _SearchPageState extends State<SearchPage>{
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
-        children: <Widget>[
+        children: [
           InkWell(
             onTap: () {
               dioGetTest();
@@ -27,13 +27,16 @@ class _SearchPageState extends State<SearchPage>{
             child: const Text('点击', style: TextStyle(fontSize: 26),),
           ),
           Text(showResult),
-          ListView.builder(
+          SizedBox(
+            height: 200,
+            child: ListView.builder(
             //数据的长度，有几个渲染几个，动态的进行渲染
             itemCount: _list.length,
             itemBuilder: (BuildContext context, int i) {
               return Text('${_list[i]["nm"]}');
             }
-          )
+          ))
+          
         ],
       )
     );
